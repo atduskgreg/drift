@@ -1,0 +1,105 @@
+// !$*UTF8*$!
+{
+	2A37F4A9FDCFA73011CA2CEA /* Project object */ = {
+		activeBuildConfigurationName = Debug;
+		activeExecutable = 37902BA90FD5EF6B00DE3FDE /* gisteditor */;
+		activeTarget = 8D15AC270486D014006FF6A4 /* gisteditor */;
+		addToTargets = (
+			8D15AC270486D014006FF6A4 /* gisteditor */,
+		);
+		codeSenseManager = 37902BB80FD5EF7000DE3FDE /* Code sense */;
+		executables = (
+			37902BA90FD5EF6B00DE3FDE /* gisteditor */,
+		);
+		perUserDictionary = {
+			PBXConfiguration.PBXFileTableDataSource3.PBXFileTableDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					341,
+					20,
+					48.16259765625,
+					43,
+					43,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+					PBXFileDataSource_Target_ColumnID,
+				);
+			};
+			PBXPerProjectTemplateStateSaveDate = 265678699;
+			PBXWorkspaceStateSaveDate = 265678699;
+		};
+		sourceControlManager = 37902BB70FD5EF7000DE3FDE /* Source Control */;
+		userBuildSettings = {
+		};
+	};
+	2A37F4B0FDCFA73011CA2CEA /* main.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {763, 362}}";
+			sepNavSelRange = "{277, 0}";
+			sepNavVisRange = "{0, 278}";
+		};
+	};
+	37902BA90FD5EF6B00DE3FDE /* gisteditor */ = {
+		isa = PBXExecutable;
+		activeArgIndices = (
+		);
+		argumentStrings = (
+		);
+		autoAttachOnCrash = 1;
+		breakpointsEnabled = 1;
+		configStateDict = {
+		};
+		customDataFormattersEnabled = 1;
+		debuggerPlugin = GDBDebugging;
+		disassemblyDisplayState = 0;
+		enableDebugStr = 1;
+		environmentEntries = (
+		);
+		executableSystemSymbolLevel = 0;
+		executableUserSymbolLevel = 0;
+		libgmallocEnabled = 0;
+		name = gisteditor;
+		sourceDirectories = (
+		);
+	};
+	37902BB70FD5EF7000DE3FDE /* Source Control */ = {
+		isa = PBXSourceControlManager;
+		fallbackIsa = XCSourceControlManager;
+		isSCMEnabled = 0;
+		scmConfiguration = {
+		};
+	};
+	37902BB80FD5EF7000DE3FDE /* Code sense */ = {
+		isa = PBXCodeSenseManager;
+		indexTemplatePath = "";
+	};
+	37902BC90FD5F10500DE3FDE /* rb_main.rb */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {763, 437}}";
+			sepNavSelRange = "{541, 0}";
+			sepNavVisRange = "{0, 483}";
+		};
+	};
+	37902BCB0FD5F11400DE3FDE /* MyDocument.rb */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {763, 646}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 478}";
+		};
+	};
+	8D15AC270486D014006FF6A4 /* gisteditor */ = {
+		activeExec = 0;
+		executables = (
+			37902BA90FD5EF6B00DE3FDE /* gisteditor */,
+		);
+	};
+}

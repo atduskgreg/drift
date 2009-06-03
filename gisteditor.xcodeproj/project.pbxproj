@@ -12,6 +12,7 @@
 		37902BCA0FD5F10500DE3FDE /* rb_main.rb in Resources */ = {isa = PBXBuildFile; fileRef = 37902BC90FD5F10500DE3FDE /* rb_main.rb */; };
 		37902BCC0FD5F11400DE3FDE /* MyDocument.rb in Resources */ = {isa = PBXBuildFile; fileRef = 37902BCB0FD5F11400DE3FDE /* MyDocument.rb */; };
 		37902BDC0FD5F16A00DE3FDE /* MacRuby.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37902BDB0FD5F16A00DE3FDE /* MacRuby.framework */; };
+		37902BEB0FD5F70100DE3FDE /* GEView.rb in Resources */ = {isa = PBXBuildFile; fileRef = 37902BEA0FD5F70100DE3FDE /* GEView.rb */; };
 		8D15AC2C0486D014006FF6A4 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 2A37F4B9FDCFA73011CA2CEA /* Credits.rtf */; };
 		8D15AC2F0486D014006FF6A4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165FFE840EACC02AAC07 /* InfoPlist.strings */; };
 		8D15AC320486D014006FF6A4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A37F4B0FDCFA73011CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
@@ -32,6 +33,7 @@
 		37902BC90FD5F10500DE3FDE /* rb_main.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = rb_main.rb; sourceTree = "<group>"; };
 		37902BCB0FD5F11400DE3FDE /* MyDocument.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = MyDocument.rb; sourceTree = "<group>"; };
 		37902BDB0FD5F16A00DE3FDE /* MacRuby.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MacRuby.framework; path = /Library/Frameworks/MacRuby.framework; sourceTree = "<absolute>"; };
+		37902BEA0FD5F70100DE3FDE /* GEView.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = GEView.rb; sourceTree = "<group>"; };
 		8D15AC360486D014006FF6A4 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8D15AC370486D014006FF6A4 /* gisteditor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = gisteditor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -92,6 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				37902BCB0FD5F11400DE3FDE /* MyDocument.rb */,
+				37902BEA0FD5F70100DE3FDE /* GEView.rb */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -176,6 +179,7 @@
 				1DDD582D0DA1D0D100B32029 /* MainMenu.xib in Resources */,
 				37902BCA0FD5F10500DE3FDE /* rb_main.rb in Resources */,
 				37902BCC0FD5F11400DE3FDE /* MyDocument.rb in Resources */,
+				37902BEB0FD5F70100DE3FDE /* GEView.rb in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

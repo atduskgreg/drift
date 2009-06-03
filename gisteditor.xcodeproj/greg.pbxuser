@@ -55,12 +55,13 @@
 		argumentStrings = (
 		);
 		autoAttachOnCrash = 1;
-		breakpointsEnabled = 1;
+		breakpointsEnabled = 0;
 		configStateDict = {
 		};
 		customDataFormattersEnabled = 1;
 		debuggerPlugin = GDBDebugging;
 		disassemblyDisplayState = 0;
+		dylibVariantSuffix = "";
 		enableDebugStr = 1;
 		environmentEntries = (
 		);
@@ -91,9 +92,9 @@
 	};
 	37902BCB0FD5F11400DE3FDE /* MyDocument.rb */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {763, 646}}";
-			sepNavSelRange = "{0, 0}";
-			sepNavVisRange = "{0, 478}";
+			sepNavIntBoundsRect = "{{0, 0}, {763, 608}}";
+			sepNavSelRange = "{140, 0}";
+			sepNavVisRange = "{0, 552}";
 		};
 	};
 	8D15AC270486D014006FF6A4 /* gisteditor */ = {

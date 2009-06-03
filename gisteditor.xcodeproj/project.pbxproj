@@ -10,7 +10,7 @@
 		1DDD582C0DA1D0D100B32029 /* MyDocument.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DDD58280DA1D0D100B32029 /* MyDocument.xib */; };
 		1DDD582D0DA1D0D100B32029 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DDD582A0DA1D0D100B32029 /* MainMenu.xib */; };
 		37902BCA0FD5F10500DE3FDE /* rb_main.rb in Resources */ = {isa = PBXBuildFile; fileRef = 37902BC90FD5F10500DE3FDE /* rb_main.rb */; };
-		37902BCC0FD5F11400DE3FDE /* MyDocument.rb in Resources */ = {isa = PBXBuildFile; fileRef = 37902BCB0FD5F11400DE3FDE /* MyDocument.rb */; };
+		37902BCC0FD5F11400DE3FDE /* GEDocument.rb in Resources */ = {isa = PBXBuildFile; fileRef = 37902BCB0FD5F11400DE3FDE /* GEDocument.rb */; };
 		37902BDC0FD5F16A00DE3FDE /* MacRuby.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37902BDB0FD5F16A00DE3FDE /* MacRuby.framework */; };
 		37902BEB0FD5F70100DE3FDE /* GEView.rb in Resources */ = {isa = PBXBuildFile; fileRef = 37902BEA0FD5F70100DE3FDE /* GEView.rb */; };
 		8D15AC2C0486D014006FF6A4 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 2A37F4B9FDCFA73011CA2CEA /* Credits.rtf */; };
@@ -31,7 +31,7 @@
 		2A37F4C5FDCFA73011CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		32DBCF750370BD2300C91783 /* gisteditor_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gisteditor_Prefix.pch; sourceTree = "<group>"; };
 		37902BC90FD5F10500DE3FDE /* rb_main.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = rb_main.rb; sourceTree = "<group>"; };
-		37902BCB0FD5F11400DE3FDE /* MyDocument.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = MyDocument.rb; sourceTree = "<group>"; };
+		37902BCB0FD5F11400DE3FDE /* GEDocument.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = GEDocument.rb; sourceTree = "<group>"; };
 		37902BDB0FD5F16A00DE3FDE /* MacRuby.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MacRuby.framework; path = /Library/Frameworks/MacRuby.framework; sourceTree = "<absolute>"; };
 		37902BEA0FD5F70100DE3FDE /* GEView.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = GEView.rb; sourceTree = "<group>"; };
 		8D15AC360486D014006FF6A4 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -93,7 +93,7 @@
 		2A37F4ABFDCFA73011CA2CEA /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				37902BCB0FD5F11400DE3FDE /* MyDocument.rb */,
+				37902BCB0FD5F11400DE3FDE /* GEDocument.rb */,
 				37902BEA0FD5F70100DE3FDE /* GEView.rb */,
 			);
 			name = Classes;
@@ -178,7 +178,7 @@
 				1DDD582C0DA1D0D100B32029 /* MyDocument.xib in Resources */,
 				1DDD582D0DA1D0D100B32029 /* MainMenu.xib in Resources */,
 				37902BCA0FD5F10500DE3FDE /* rb_main.rb in Resources */,
-				37902BCC0FD5F11400DE3FDE /* MyDocument.rb in Resources */,
+				37902BCC0FD5F11400DE3FDE /* GEDocument.rb in Resources */,
 				37902BEB0FD5F70100DE3FDE /* GEView.rb in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -6,7 +6,7 @@
 #  Copyright (c) 2009 __MyCompanyName__. All rights reserved.
 #
 
-class MyDocument < NSDocument
+class GEDocument < NSDocument
 
   def windowNibName
     # Implement this to return a nib to load OR implement

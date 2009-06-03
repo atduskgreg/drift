@@ -90,11 +90,18 @@
 			sepNavVisRange = "{0, 483}";
 		};
 	};
-	37902BCB0FD5F11400DE3FDE /* MyDocument.rb */ = {
+	37902BCB0FD5F11400DE3FDE /* GEDocument.rb */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {763, 608}}";
+			sepNavIntBoundsRect = "{{0, 0}, {763, 589}}";
 			sepNavSelRange = "{140, 0}";
-			sepNavVisRange = "{0, 552}";
+			sepNavVisRange = "{0, 787}";
+		};
+	};
+	37902BEA0FD5F70100DE3FDE /* GEView.rb */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {763, 570}}";
+			sepNavSelRange = "{203, 0}";
+			sepNavVisRange = "{2, 391}";
 		};
 	};
 	8D15AC270486D014006FF6A4 /* gisteditor */ = {

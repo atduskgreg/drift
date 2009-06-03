@@ -6,7 +6,7 @@
 #  Copyright (c) 2009 __MyCompanyName__. All rights reserved.
 #
 
-class GEView < NSView
+class GEView < NSTextView
 
   def initWithFrame(frame)
     super(frame)

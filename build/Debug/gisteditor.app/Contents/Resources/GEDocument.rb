@@ -11,11 +11,11 @@ class GEDocument < NSDocument
   attr_accessor :text_view
   attr_accessor :view_contents
 
-  def initialize
+  def initialize()
     view_contents ||= NSAttributedString.alloc.initWithString("")
 
-  center = NSNotificationCenter.defaultCenter  
-  center.addObserver(self, selector:textDidChange,
+    center = NSNotificationCenter.defaultCenter  
+    center.addObserver(self, selector:textDidChange,
                 name:NSTextDidChangeNotification,
               object:textView)
   end

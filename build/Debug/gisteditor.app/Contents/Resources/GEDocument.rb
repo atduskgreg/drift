@@ -13,16 +13,11 @@ class GEDocument < NSDocument
 
   def initialize()
     view_contents ||= NSAttributedString.alloc.initWithString("")
-
-    center = NSNotificationCenter.defaultCenter  
-    center.addObserver(self, selector:textDidChange,
-                name:NSTextDidChangeNotification,
-              object:textView)
   end
   
   def textDidChange(notification)
     NSLog("yo")
-    NSLog(self.text_view.textStorage)
+    NSLog(self.text_view.textStorage.description)
     self.view_contents = self.text_view.textStorage
   end
 

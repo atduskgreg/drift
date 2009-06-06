@@ -10,14 +10,18 @@ class GEDocument < NSDocument
 
   attr_accessor :text_view
   attr_accessor :view_contents
-
-  def initialize()
-    view_contents ||= NSAttributedString.alloc.initWithString("")
+  attr_accessor :library
+  
+  def applicationDidFinishLaunching(notification)
+    NSLog("hi friends!")
   end
   
   def textDidChange(notification)
     self.view_contents = self.text_view.textStorage
     postGist(self.view_contents.string, "test")
+  end
+  
+  def loadLibrary
   end
   
   def postGist(gist_content, filename)

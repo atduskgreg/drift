@@ -16,10 +16,30 @@ class GEDocument < NSDocument
   end
   
   def textDidChange(notification)
-    NSLog("yo")
-    NSLog(self.text_view.textStorage.description)
     self.view_contents = self.text_view.textStorage
+    postGist(self.view_contents.string, "test")
   end
+  
+  def postGist(gist_content, filename)
+    post = "files[#{filename}]=#{gist_content}"
+    postData = post.dataUsingEncoding(NSASCIIStringEncoding,
+                                      allowLossyConversion:true)
+    NSLog(post)
+    postLength = NSString.stringWithFormat("%d", postData.length)
+    request = NSMutableURLRequest.alloc.init
+    request.setURL(NSURL.URLWithString("http://gist.github.com/api/v1/xml/new"))
+    request.setHTTPMethod("POST")
+    request.setValue(postLength, forHTTPHeaderField:"Content-Length")
+    request.setValue("application/x-www-form-urlencoded", forHTTPHeaderField:"Content-Type")
+    request.setHTTPBody(postData)
+    
+    delegate = ConnectionDelegate.new(self) do |doc|
+      NSLog(doc.rootElement.nodesForXPath('gist/repo', error:nil).first.stringValue)
+    end
+    
+    NSURLConnection.connectionWithRequest(request, delegate:delegate)
+  end
+  
 
   def windowNibName
     # Implement this to return a nib to load OR implement

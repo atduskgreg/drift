@@ -12,8 +12,10 @@ class GEDocument < NSDocument
   attr_accessor :view_contents
   attr_accessor :library
   
+  LIBRARY_PATH = "~/Library/Application\ Support/Drift/library.xml"
+  
   def applicationDidFinishLaunching(notification)
-    NSLog("hi friends!")
+    # pass
   end
   
   def textDidChange(notification)
@@ -21,7 +23,17 @@ class GEDocument < NSDocument
     postGist(self.view_contents.string, "test")
   end
   
-  def loadLibrary
+  
+  def library
+    NSLog("loading library")
+    NSLog(self.inspect)
+    @library ||= NSDictionary.alloc.initWithContentsOfFile(LIBRARY_PATH.stringByExpandingTildeInPath) || {"gists" => []}
+  end
+  
+  def flushLibrary
+    NSLog("flushing library")
+    NSLog(@library.inspect)
+    @library.writeToFile(LIBRARY_PATH.stringByExpandingTildeInPath, atomically:true)
   end
   
   def postGist(gist_content, filename)
@@ -36,9 +48,11 @@ class GEDocument < NSDocument
     request.setValue(postLength, forHTTPHeaderField:"Content-Length")
     request.setValue("application/x-www-form-urlencoded", forHTTPHeaderField:"Content-Type")
     request.setHTTPBody(postData)
-    
+    thisDoc = self
     delegate = ConnectionDelegate.new(self) do |doc|
-      NSLog(doc.rootElement.nodesForXPath('gist/repo', error:nil).first.stringValue)
+      # saveGist(doc)
+       gist =  GEGist.new_from_xml(doc).save(thisDoc)
+        NSLog(gist.inspect)#doc.rootElement.nodesForXPath('gist/repo', error:nil).first.stringValue)
     end
     
     NSURLConnection.connectionWithRequest(request, delegate:delegate)

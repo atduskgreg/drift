@@ -9,8 +9,9 @@
 class GEDocument < NSDocument
 
   attr_accessor :text_view
-  attr_accessor :view_contents
+  attr_accessor :view_contents, :gist_title
   attr_accessor :library
+  attr_accessor :gist_title_window
   
   LIBRARY_PATH = "~/Library/Application\ Support/Drift/library.xml"
   
@@ -19,10 +20,9 @@ class GEDocument < NSDocument
   end
   
   def textDidChange(notification)
+    NSLog(self.inspect)
     self.view_contents = self.text_view.textStorage
-    postGist(self.view_contents.string, "test")
   end
-  
   
   def library
     NSLog("loading library")
@@ -48,21 +48,53 @@ class GEDocument < NSDocument
     request.setValue(postLength, forHTTPHeaderField:"Content-Length")
     request.setValue("application/x-www-form-urlencoded", forHTTPHeaderField:"Content-Type")
     request.setHTTPBody(postData)
+    
     thisDoc = self
     delegate = ConnectionDelegate.new(self) do |doc|
-      # saveGist(doc)
-       gist =  GEGist.new_from_xml(doc).save(thisDoc)
-        NSLog(gist.inspect)#doc.rootElement.nodesForXPath('gist/repo', error:nil).first.stringValue)
+      gist =  GEGist.new_from_xml(doc).save(thisDoc)
     end
     
     NSURLConnection.connectionWithRequest(request, delegate:delegate)
   end
   
-
   def windowNibName
     # Implement this to return a nib to load OR implement
     # -makeWindowControllers to manually create your controllers.
     return "GEDocument"
+  end
+  
+ #def runModalSavePanelForSaveOperation(saveOperation, delegate:delegate, didSaveSelector:didSaveSelector, contextInfo:contextInfo)
+ #   NSApp.beginSheet(gist_title_window, 
+ #                   modalForWindow:text_view,
+ #                   modalDelegate:nil,
+ #                   didEndSelector:nil,
+ #                   contextInfo:nil)
+#
+ #   postGist(self.view_contents.string, "test")
+  #end
+  
+  def actuallySendGist(sender)
+    NSLog("posting gist")
+    postGist(self.view_contents.string, self.gist_title.stringValue)
+    NSApp.endSheet(gist_title_window)
+    gist_title_window.orderOut(sender)
+  end
+  
+  def captureGistTitleName(sender)
+    NSLog("capturing!")
+    NSLog(self.inspect)
+    NSLog(gist_title_window.class.to_s)
+    NSApp.beginSheet(gist_title_window, 
+                    modalForWindow:text_view.window,
+                    modalDelegate:nil,
+                    didEndSelector:nil,
+                    contextInfo:nil)
+  end
+  
+  def hideSaveDialog(sender)
+    NSLog "Cancelled save dialog"
+    NSApp.endSheet(gist_title_window)
+    gist_title_window.orderOut(sender)
   end
 
   def dataRepresentationOfType(type)

@@ -231,6 +231,8 @@
 			<key>Layout</key>
 			<array>
 				<dict>
+					<key>BecomeActive</key>
+					<true/>
 					<key>ContentConfiguration</key>
 					<dict>
 						<key>PBXBottomSmartGroupGIDs</key>
@@ -278,8 +280,8 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>13</integer>
-									<integer>9</integer>
+									<integer>3</integer>
+									<integer>1</integer>
 									<integer>0</integer>
 								</array>
 							</array>
@@ -314,14 +316,12 @@
 					<key>Dock</key>
 					<array>
 						<dict>
-							<key>BecomeActive</key>
-							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>GEDocument.rb</string>
+								<string>GEGist.rb</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -329,11 +329,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>GEDocument.rb</string>
+										<string>GEGist.rb</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>37DE0E410FE109A200EDC07B</string>
+										<string>378E7F990FE2FFF70019A0E6</string>
 										<key>history</key>
 										<array>
 											<string>37902CD30FD6F6F100DE3FDE</string>
@@ -341,8 +341,8 @@
 											<string>37902CFD0FD6FBAD00DE3FDE</string>
 											<string>378DED7E0FDB008200F1958C</string>
 											<string>37DE0E370FE108C100EDC07B</string>
-											<string>37DE0E380FE108C100EDC07B</string>
-											<string>37DE0E390FE108C100EDC07B</string>
+											<string>378E7F940FE2FFF70019A0E6</string>
+											<string>378E7F950FE2FFF70019A0E6</string>
 										</array>
 										<key>prevStack</key>
 										<array>
@@ -353,9 +353,9 @@
 											<string>37902D000FD6FBAD00DE3FDE</string>
 											<string>37902D160FD7BA4A00DE3FDE</string>
 											<string>378DED8F0FDB20EC00F1958C</string>
-											<string>37DE0E3A0FE108C100EDC07B</string>
-											<string>37DE0E3B0FE108C100EDC07B</string>
-											<string>37DE0E3C0FE108C100EDC07B</string>
+											<string>378E7F960FE2FFF70019A0E6</string>
+											<string>378E7F970FE2FFF70019A0E6</string>
+											<string>378E7F980FE2FFF70019A0E6</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -413,9 +413,9 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>37DE0DF00FE0F96100EDC07B</string>
+				<string>378E7F7A0FE2F2B80019A0E6</string>
 				<string>1CE0B1FE06471DED0097A5F4</string>
-				<string>37DE0DF10FE0F96100EDC07B</string>
+				<string>378E7F7B0FE2F2B80019A0E6</string>
 				<string>1CE0B20306471E060097A5F4</string>
 				<string>1CE0B20506471E060097A5F4</string>
 			</array>
@@ -549,8 +549,8 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>37902BD30FD5F14500DE3FDE</string>
 		<string>1CD10A99069EF8BA00B06720</string>
+		<string>37902BD30FD5F14500DE3FDE</string>
 		<string>1C78EAAD065D492600B07095</string>
 		<string>/Users/greg/code/gisteditor/gisteditor.xcodeproj</string>
 	</array>
@@ -632,7 +632,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>37902BD30FD5F14500DE3FDE</string>
-				<string>37DE0DF20FE0F96100EDC07B</string>
+				<string>378E7F7F0FE2FC820019A0E6</string>
 				<string>1CD0528F0623707200166675</string>
 				<string>XCMainBuildResultsModuleGUID</string>
 			</array>
@@ -674,8 +674,8 @@
 										<string>yes</string>
 										<key>sizes</key>
 										<array>
-											<string>{{0, 0}, {316, 198}}</string>
-											<string>{{316, 0}, {378, 198}}</string>
+											<string>{{0, 0}, {316, 201}}</string>
+											<string>{{316, 0}, {378, 201}}</string>
 										</array>
 									</dict>
 									<key>VerticalSplitView</key>
@@ -690,8 +690,8 @@
 										<string>yes</string>
 										<key>sizes</key>
 										<array>
-											<string>{{0, 0}, {694, 198}}</string>
-											<string>{{0, 198}, {694, 183}}</string>
+											<string>{{0, 0}, {694, 201}}</string>
+											<string>{{0, 201}, {694, 180}}</string>
 										</array>
 									</dict>
 								</dict>
@@ -724,7 +724,7 @@
 										<real>148</real>
 									</array>
 									<key>Frame</key>
-									<string>{{316, 0}, {378, 198}}</string>
+									<string>{{316, 0}, {378, 201}}</string>
 									<key>RubberWindowFrame</key>
 									<string>21 333 694 422 0 0 1280 778 </string>
 								</dict>
@@ -752,13 +752,13 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>1CD10A99069EF8BA00B06720</string>
-				<string>37DE0DF30FE0F96100EDC07B</string>
+				<string>378E7F800FE2FC820019A0E6</string>
 				<string>1C162984064C10D400B95A72</string>
-				<string>37DE0DF40FE0F96100EDC07B</string>
-				<string>37DE0DF50FE0F96100EDC07B</string>
-				<string>37DE0DF60FE0F96100EDC07B</string>
-				<string>37DE0DF70FE0F96100EDC07B</string>
-				<string>37DE0DF80FE0F96100EDC07B</string>
+				<string>378E7F810FE2FC820019A0E6</string>
+				<string>378E7F820FE2FC820019A0E6</string>
+				<string>378E7F830FE2FC820019A0E6</string>
+				<string>378E7F840FE2FC820019A0E6</string>
+				<string>378E7F850FE2FC820019A0E6</string>
 			</array>
 			<key>ToolbarConfiguration</key>
 			<string>xcode.toolbar.config.debugV3</string>
@@ -922,7 +922,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>1C78EAAD065D492600B07095</string>
-				<string>37DE0DF90FE0F96100EDC07B</string>
+				<string>378E7F860FE2FC820019A0E6</string>
 				<string>1C78EAAC065D492600B07095</string>
 			</array>
 			<key>ToolbarConfiguration</key>

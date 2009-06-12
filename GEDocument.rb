@@ -51,7 +51,9 @@ class GEDocument < NSDocument
     
     thisDoc = self
     delegate = ConnectionDelegate.new(self) do |doc|
-      gist =  GEGist.new_from_xml(doc).save(thisDoc)
+      gist =  GEGist.new_from_xml(doc)
+      gist.title = filename
+      gist.save(thisDoc)
     end
     
     NSURLConnection.connectionWithRequest(request, delegate:delegate)
@@ -77,6 +79,8 @@ class GEDocument < NSDocument
     NSLog("posting gist")
     postGist(self.view_contents.string, self.gist_title.stringValue)
     NSApp.endSheet(gist_title_window)
+    self.text_view.window.setTitle(self.gist_title.stringValue)
+    
     gist_title_window.orderOut(sender)
   end
   

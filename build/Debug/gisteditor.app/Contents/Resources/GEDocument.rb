@@ -12,6 +12,7 @@ class GEDocument < NSDocument
   attr_accessor :view_contents, :gist_title
   attr_accessor :library
   attr_accessor :gist_title_window
+  attr_accessor :current_gist
   
   LIBRARY_PATH = "~/Library/Application\ Support/Drift/library.xml"
   
@@ -54,6 +55,9 @@ class GEDocument < NSDocument
       gist =  GEGist.new_from_xml(doc)
       gist.title = filename
       gist.save(thisDoc)
+      thisDoc.current_gist = gist
+      thisDoc.text_view.window.setTitle("#{filename} - gist.github.com/#{gist.gist_id}")
+      `echo "http://gist.github.com/#{gist.gist_id}" | pbcopy`
     end
     
     NSURLConnection.connectionWithRequest(request, delegate:delegate)
@@ -64,22 +68,11 @@ class GEDocument < NSDocument
     # -makeWindowControllers to manually create your controllers.
     return "GEDocument"
   end
-  
- #def runModalSavePanelForSaveOperation(saveOperation, delegate:delegate, didSaveSelector:didSaveSelector, contextInfo:contextInfo)
- #   NSApp.beginSheet(gist_title_window, 
- #                   modalForWindow:text_view,
- #                   modalDelegate:nil,
- #                   didEndSelector:nil,
- #                   contextInfo:nil)
-#
- #   postGist(self.view_contents.string, "test")
-  #end
-  
+
   def actuallySendGist(sender)
     NSLog("posting gist")
     postGist(self.view_contents.string, self.gist_title.stringValue)
     NSApp.endSheet(gist_title_window)
-    self.text_view.window.setTitle(self.gist_title.stringValue)
     
     gist_title_window.orderOut(sender)
   end

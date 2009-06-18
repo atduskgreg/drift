@@ -10,11 +10,8 @@ class GEDocument < NSDocument
 
   attr_accessor :text_view
   attr_accessor :view_contents, :gist_title
-  attr_accessor :library
   attr_accessor :gist_title_window
   attr_accessor :current_gist
-  
-  LIBRARY_PATH = "~/Library/Application\ Support/Drift/library.xml"
   
   def applicationDidFinishLaunching(notification)
     # pass
@@ -26,19 +23,11 @@ class GEDocument < NSDocument
   end
   
   def library
-    NSLog("loading library")
-    NSLog(self.inspect)
-    @library ||= NSDictionary.alloc.initWithContentsOfFile(LIBRARY_PATH.stringByExpandingTildeInPath) || {"gists" => []}
-  end
-  
-  def flushLibrary
-    NSLog("flushing library")
-    NSLog(@library.inspect)
-    @library.writeToFile(LIBRARY_PATH.stringByExpandingTildeInPath, atomically:true)
+    @library ||= GEGistLibrary.new
   end
   
   def postGist(gist_content, filename)
-    post = "files[#{filename}]=#{gist_content}"
+    post = "files[#{filename}]=#{gist_content}&login=atduskgreg&token=1d84af3a6008854ade82ec7d242e7b3a"
     postData = post.dataUsingEncoding(NSASCIIStringEncoding,
                                       allowLossyConversion:true)
     NSLog(post)
@@ -78,9 +67,6 @@ class GEDocument < NSDocument
   end
   
   def captureGistTitleName(sender)
-    NSLog("capturing!")
-    NSLog(self.inspect)
-    NSLog(gist_title_window.class.to_s)
     NSApp.beginSheet(gist_title_window, 
                     modalForWindow:text_view.window,
                     modalDelegate:nil,

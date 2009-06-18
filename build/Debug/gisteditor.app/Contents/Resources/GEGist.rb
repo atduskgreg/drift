@@ -32,7 +32,7 @@ class GEGist
   
   def save(owner)
     NSLog("owner: #{owner.inspect}")
-    owner.library['gists'] << self.to_h
-    owner.flushLibrary
+    owner.library.gists << self.to_h
+    owner.library.flush
   end
 end

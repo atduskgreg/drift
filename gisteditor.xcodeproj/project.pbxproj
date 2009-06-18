@@ -14,6 +14,8 @@
 		37902BCC0FD5F11400DE3FDE /* GEDocument.rb in Resources */ = {isa = PBXBuildFile; fileRef = 37902BCB0FD5F11400DE3FDE /* GEDocument.rb */; };
 		37902BDC0FD5F16A00DE3FDE /* MacRuby.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37902BDB0FD5F16A00DE3FDE /* MacRuby.framework */; };
 		37902D120FD7A3B300DE3FDE /* ConnectionDelegate.rb in Resources */ = {isa = PBXBuildFile; fileRef = 37902D110FD7A3B300DE3FDE /* ConnectionDelegate.rb */; };
+		37A835670FEAC9A80064AF4F /* GEGistListDelegate.rb in Resources */ = {isa = PBXBuildFile; fileRef = 37A835660FEAC9A70064AF4F /* GEGistListDelegate.rb */; };
+		37A835740FEACC880064AF4F /* GEGistLibrary.rb in Resources */ = {isa = PBXBuildFile; fileRef = 37A835730FEACC880064AF4F /* GEGistLibrary.rb */; };
 		8D15AC2C0486D014006FF6A4 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 2A37F4B9FDCFA73011CA2CEA /* Credits.rtf */; };
 		8D15AC2F0486D014006FF6A4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165FFE840EACC02AAC07 /* InfoPlist.strings */; };
 		8D15AC320486D014006FF6A4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A37F4B0FDCFA73011CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
@@ -36,6 +38,8 @@
 		37902BCB0FD5F11400DE3FDE /* GEDocument.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = GEDocument.rb; sourceTree = "<group>"; };
 		37902BDB0FD5F16A00DE3FDE /* MacRuby.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MacRuby.framework; path = /Library/Frameworks/MacRuby.framework; sourceTree = "<absolute>"; };
 		37902D110FD7A3B300DE3FDE /* ConnectionDelegate.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = ConnectionDelegate.rb; sourceTree = "<group>"; };
+		37A835660FEAC9A70064AF4F /* GEGistListDelegate.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = GEGistListDelegate.rb; sourceTree = "<group>"; };
+		37A835730FEACC880064AF4F /* GEGistLibrary.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = GEGistLibrary.rb; sourceTree = "<group>"; };
 		8D15AC360486D014006FF6A4 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8D15AC370486D014006FF6A4 /* gisteditor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = gisteditor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -97,6 +101,8 @@
 			children = (
 				37902BCB0FD5F11400DE3FDE /* GEDocument.rb */,
 				378DED880FDB0B3F00F1958C /* GEGist.rb */,
+				37A835730FEACC880064AF4F /* GEGistLibrary.rb */,
+				37A835660FEAC9A70064AF4F /* GEGistListDelegate.rb */,
 				37902D110FD7A3B300DE3FDE /* ConnectionDelegate.rb */,
 			);
 			name = Classes;
@@ -184,6 +190,8 @@
 				37902BCC0FD5F11400DE3FDE /* GEDocument.rb in Resources */,
 				37902D120FD7A3B300DE3FDE /* ConnectionDelegate.rb in Resources */,
 				378DED890FDB0B3F00F1958C /* GEGist.rb in Resources */,
+				37A835670FEAC9A80064AF4F /* GEGistListDelegate.rb in Resources */,
+				37A835740FEACC880064AF4F /* GEGistLibrary.rb in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

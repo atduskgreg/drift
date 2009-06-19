@@ -7,7 +7,7 @@
 #
 
 class GEGist
-  attr_accessor :gist_id, :created_at, :title
+  attr_accessor :gist_id, :created_at, :title, :body
 
   def self.new_from_xml(xml)
     self.new :gist_id => self.extract_from_xml(xml, 'repo'),
@@ -22,12 +22,15 @@ class GEGist
   def initialize(opts={})
     @gist_id = opts[:gist_id]
     @created_at = opts[:created_at]
+    @body = opts[:body]
+    @title = opts[:title]
   end
   
   def to_h
     {:gist_id => @gist_id,
      :created_at => @created_at,
-     :title => @title }
+     :title => @title,
+     :body => @body }
   end
   
   def save(owner)

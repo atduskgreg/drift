@@ -10,11 +10,20 @@ class GEGistListDelegate
   attr_accessor :associatedDocument
   
   def numberOfRowsInTableView(aTableView)
-    associatedDocument.library.gists.length
+    @library = GEGistLibrary.new
+    @library.gists.length
+  end
+  
+  def tableViewSelectionDidChange(notification)
+    gist = GEGist.new(gistsSortedByName[notification.object.selectedRow])
+    associatedDocument.setGist(gist)
+  end
+
+  def gistsSortedByName
+    associatedDocument.library.gists.sort_by{|g| g["title"] || g["gist_id"]}
   end
 
   def tableView(tableView, objectValueForTableColumn:column, row:row)
-    gistsSortedByName = associatedDocument.library.gists.sort_by{|g| g["title"] || g["gist_id"]}
     if row < gistsSortedByName.length
       return gistsSortedByName[row].valueForKey("title") || "gist##{gistsSortedByName[row].valueForKey('gist_id')}"
     end

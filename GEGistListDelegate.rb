@@ -9,6 +9,10 @@
 class GEGistListDelegate
   attr_accessor :associatedDocument
   
+  def awakeFromNib()
+    NSLog(preferences.user.login)
+  end
+  
   def numberOfRowsInTableView(aTableView)
     @library = GEGistLibrary.new
     @library.gists.length

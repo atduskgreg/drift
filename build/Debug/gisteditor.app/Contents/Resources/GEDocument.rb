@@ -15,6 +15,7 @@ class GEDocument < NSDocument
   attr_accessor :associated_library
   
   def applicationDidFinishLaunching(notification)
+
     # pass
   end
   

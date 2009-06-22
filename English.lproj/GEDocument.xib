@@ -8,7 +8,7 @@
 		<string key="IBDocument.HIToolboxVersion">353.00</string>
 		<object class="NSMutableArray" key="IBDocument.EditedObjectIDs">
 			<bool key="EncodedWithXMLCoder">YES</bool>
-			<integer value="100026"/>
+			<integer value="6"/>
 			<integer value="100036"/>
 		</object>
 		<object class="NSArray" key="IBDocument.PluginDependencies">
@@ -83,7 +83,7 @@
 													<string>WebURLsWithTitlesPboardType</string>
 												</object>
 											</object>
-											<string key="NSFrameSize">{598, 77}</string>
+											<string key="NSFrameSize">{598, 14}</string>
 											<reference key="NSSuperview" ref="561630725"/>
 											<object class="NSTextContainer" key="NSTextContainer" id="1007486519">
 												<object class="NSLayoutManager" key="NSLayoutManager">

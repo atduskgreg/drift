@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		1DDD582C0DA1D0D100B32029 /* GEDocument.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DDD58280DA1D0D100B32029 /* GEDocument.xib */; };
 		1DDD582D0DA1D0D100B32029 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DDD582A0DA1D0D100B32029 /* MainMenu.xib */; };
+		374E6A6F0FEF62D10062A2C9 /* Preferences.xib in Resources */ = {isa = PBXBuildFile; fileRef = 374E6A6E0FEF62D10062A2C9 /* Preferences.xib */; };
+		37895EFC0FEDDC08005EE5EE /* Preferences.rb in Resources */ = {isa = PBXBuildFile; fileRef = 37895EFB0FEDDC08005EE5EE /* Preferences.rb */; };
 		378DED890FDB0B3F00F1958C /* GEGist.rb in Resources */ = {isa = PBXBuildFile; fileRef = 378DED880FDB0B3F00F1958C /* GEGist.rb */; };
 		37902BCA0FD5F10500DE3FDE /* rb_main.rb in Resources */ = {isa = PBXBuildFile; fileRef = 37902BC90FD5F10500DE3FDE /* rb_main.rb */; };
 		37902BCC0FD5F11400DE3FDE /* GEDocument.rb in Resources */ = {isa = PBXBuildFile; fileRef = 37902BCB0FD5F11400DE3FDE /* GEDocument.rb */; };
@@ -33,6 +35,8 @@
 		2A37F4C4FDCFA73011CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		2A37F4C5FDCFA73011CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		32DBCF750370BD2300C91783 /* gisteditor_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gisteditor_Prefix.pch; sourceTree = "<group>"; };
+		374E6A6E0FEF62D10062A2C9 /* Preferences.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Preferences.xib; sourceTree = "<group>"; };
+		37895EFB0FEDDC08005EE5EE /* Preferences.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = Preferences.rb; sourceTree = "<group>"; };
 		378DED880FDB0B3F00F1958C /* GEGist.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = GEGist.rb; sourceTree = "<group>"; };
 		37902BC90FD5F10500DE3FDE /* rb_main.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = rb_main.rb; sourceTree = "<group>"; };
 		37902BCB0FD5F11400DE3FDE /* GEDocument.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = GEDocument.rb; sourceTree = "<group>"; };
@@ -101,6 +105,7 @@
 			children = (
 				37902BCB0FD5F11400DE3FDE /* GEDocument.rb */,
 				378DED880FDB0B3F00F1958C /* GEGist.rb */,
+				37895EFB0FEDDC08005EE5EE /* Preferences.rb */,
 				37A835730FEACC880064AF4F /* GEGistLibrary.rb */,
 				37A835660FEAC9A70064AF4F /* GEGistListDelegate.rb */,
 				37902D110FD7A3B300DE3FDE /* ConnectionDelegate.rb */,
@@ -126,6 +131,7 @@
 				089C165FFE840EACC02AAC07 /* InfoPlist.strings */,
 				1DDD58280DA1D0D100B32029 /* GEDocument.xib */,
 				1DDD582A0DA1D0D100B32029 /* MainMenu.xib */,
+				374E6A6E0FEF62D10062A2C9 /* Preferences.xib */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -192,6 +198,8 @@
 				378DED890FDB0B3F00F1958C /* GEGist.rb in Resources */,
 				37A835670FEAC9A80064AF4F /* GEGistListDelegate.rb in Resources */,
 				37A835740FEACC880064AF4F /* GEGistLibrary.rb in Resources */,
+				37895EFC0FEDDC08005EE5EE /* Preferences.rb in Resources */,
+				374E6A6F0FEF62D10062A2C9 /* Preferences.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

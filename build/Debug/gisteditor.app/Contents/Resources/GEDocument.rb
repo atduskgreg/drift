@@ -39,7 +39,7 @@ class GEDocument < NSDocument
   end
   
   def postGist(gist_content, filename)
-    post = "files[#{filename}]=#{gist_content}&login=atduskgreg&token=1d84af3a6008854ade82ec7d242e7b3a"
+    post = "files[#{filename}]=#{gist_content}&login=#{preferences.user.login}&token=#{preferences.user.token}"
     postData = post.dataUsingEncoding(NSASCIIStringEncoding,
                                       allowLossyConversion:true)
     postLength = NSString.stringWithFormat("%d", postData.length)

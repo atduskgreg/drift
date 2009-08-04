@@ -1120,7 +1120,7 @@
 			<object class="NSWindowTemplate" id="842391767">
 				<int key="NSWindowStyleMask">15</int>
 				<int key="NSWindowBacking">2</int>
-				<string key="NSWindowRect">{{196, 374}, {325, 136}}</string>
+				<string key="NSWindowRect">{{196, 374}, {423, 136}}</string>
 				<int key="NSWTFlags">-469762048</int>
 				<string key="NSWindowTitle">Drift Preferences</string>
 				<string key="NSWindowClass">NSPanel</string>
@@ -1186,7 +1186,7 @@
 						<object class="NSTextField" id="24158720">
 							<reference key="NSNextResponder" ref="185651455"/>
 							<int key="NSvFlags">268</int>
-							<string key="NSFrame">{{114, 94}, {191, 22}}</string>
+							<string key="NSFrame">{{114, 94}, {289, 22}}</string>
 							<reference key="NSSuperview" ref="185651455"/>
 							<bool key="NSEnabled">YES</bool>
 							<object class="NSTextFieldCell" key="NSCell" id="423032661">
@@ -1216,7 +1216,7 @@
 						<object class="NSButton" id="571199902">
 							<reference key="NSNextResponder" ref="185651455"/>
 							<int key="NSvFlags">268</int>
-							<string key="NSFrame">{{204, 12}, {107, 32}}</string>
+							<string key="NSFrame">{{302, 12}, {107, 32}}</string>
 							<reference key="NSSuperview" ref="185651455"/>
 							<bool key="NSEnabled">YES</bool>
 							<object class="NSButtonCell" key="NSCell" id="691801534">
@@ -1236,7 +1236,7 @@
 						<object class="NSButton" id="904533372">
 							<reference key="NSNextResponder" ref="185651455"/>
 							<int key="NSvFlags">268</int>
-							<string key="NSFrame">{{108, 12}, {96, 32}}</string>
+							<string key="NSFrame">{{206, 12}, {96, 32}}</string>
 							<reference key="NSSuperview" ref="185651455"/>
 							<bool key="NSEnabled">YES</bool>
 							<object class="NSButtonCell" key="NSCell" id="36669582">
@@ -1253,29 +1253,32 @@
 								<int key="NSPeriodicInterval">25</int>
 							</object>
 						</object>
-						<object class="NSTextField" id="437462703">
+						<object class="NSTextField" id="465825811">
 							<reference key="NSNextResponder" ref="185651455"/>
 							<int key="NSvFlags">268</int>
-							<string key="NSFrame">{{114, 63}, {191, 22}}</string>
+							<string key="NSFrame">{{114, 63}, {289, 22}}</string>
 							<reference key="NSSuperview" ref="185651455"/>
 							<bool key="NSEnabled">YES</bool>
-							<object class="NSTextFieldCell" key="NSCell" id="649074460">
+							<object class="NSTextFieldCell" key="NSCell" id="644816475">
 								<int key="NSCellFlags">-1804468671</int>
 								<int key="NSCellFlags2">272630784</int>
 								<string key="NSContents"/>
 								<reference key="NSSupport" ref="33701594"/>
-								<reference key="NSControlView" ref="437462703"/>
+								<reference key="NSControlView" ref="465825811"/>
 								<bool key="NSDrawsBackground">YES</bool>
 								<reference key="NSBackgroundColor" ref="481285003"/>
 								<reference key="NSTextColor" ref="265117093"/>
 							</object>
 						</object>
 					</object>
-					<string key="NSFrameSize">{325, 136}</string>
+					<string key="NSFrameSize">{423, 136}</string>
 					<reference key="NSSuperview"/>
 				</object>
 				<string key="NSScreenRect">{{0, 0}, {1280, 778}}</string>
 				<string key="NSMaxSize">{3.40282e+38, 3.40282e+38}</string>
+			</object>
+			<object class="NSCustomObject" id="507306431">
+				<string key="NSClassName">GEPrefWindowController</string>
 			</object>
 		</object>
 		<object class="IBObjectContainer" key="IBDocument.Objects">
@@ -1824,6 +1827,38 @@
 						<reference key="destination" ref="1023925487"/>
 					</object>
 					<int key="connectionID">500</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBActionConnection" key="connection">
+						<string key="label">setPreferences:</string>
+						<reference key="source" ref="507306431"/>
+						<reference key="destination" ref="571199902"/>
+					</object>
+					<int key="connectionID">502</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">gh_LoginField</string>
+						<reference key="source" ref="507306431"/>
+						<reference key="destination" ref="24158720"/>
+					</object>
+					<int key="connectionID">505</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">gh_TokenField</string>
+						<reference key="source" ref="507306431"/>
+						<reference key="destination" ref="465825811"/>
+					</object>
+					<int key="connectionID">506</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBActionConnection" key="connection">
+						<string key="label">performClose:</string>
+						<reference key="source" ref="842391767"/>
+						<reference key="destination" ref="904533372"/>
+					</object>
+					<int key="connectionID">507</int>
 				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -2729,9 +2764,9 @@
 							<reference ref="24158720"/>
 							<reference ref="48481478"/>
 							<reference ref="1024745292"/>
-							<reference ref="904533372"/>
+							<reference ref="465825811"/>
 							<reference ref="571199902"/>
-							<reference ref="437462703"/>
+							<reference ref="904533372"/>
 						</object>
 						<reference key="parent" ref="842391767"/>
 					</object>
@@ -2807,17 +2842,22 @@
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">496</int>
-						<reference key="object" ref="437462703"/>
+						<reference key="object" ref="465825811"/>
 						<object class="NSMutableArray" key="children">
 							<bool key="EncodedWithXMLCoder">YES</bool>
-							<reference ref="649074460"/>
+							<reference ref="644816475"/>
 						</object>
 						<reference key="parent" ref="185651455"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">497</int>
-						<reference key="object" ref="649074460"/>
-						<reference key="parent" ref="437462703"/>
+						<reference key="object" ref="644816475"/>
+						<reference key="parent" ref="465825811"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">501</int>
+						<reference key="object" ref="507306431"/>
+						<reference key="parent" ref="1049"/>
 					</object>
 				</object>
 			</object>
@@ -3027,6 +3067,7 @@
 					<string>497.IBPluginDependency</string>
 					<string>5.IBPluginDependency</string>
 					<string>5.ImportedFromIB2</string>
+					<string>501.IBPluginDependency</string>
 					<string>56.IBPluginDependency</string>
 					<string>56.ImportedFromIB2</string>
 					<string>57.IBEditorWindowLastContentRect</string>
@@ -3248,8 +3289,8 @@
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
-					<string>{{249, 61}, {325, 136}}</string>
-					<string>{{249, 61}, {325, 136}}</string>
+					<string>{{74, 479}, {423, 136}}</string>
+					<string>{{74, 479}, {423, 136}}</string>
 					<boolean value="NO"/>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
@@ -3266,6 +3307,7 @@
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<reference ref="9"/>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<reference ref="9"/>
 					<string>{{209, 485}, {210, 183}}</string>
@@ -3322,13 +3364,37 @@
 				</object>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">500</int>
+			<int key="maxID">507</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
 				<bool key="EncodedWithXMLCoder">YES</bool>
 				<object class="IBPartialClassDescription">
 					<string key="className">GEDocument</string>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBUserSource</string>
+						<string key="minorKey"/>
+					</object>
+				</object>
+				<object class="IBPartialClassDescription">
+					<string key="className">GEPrefWindowController</string>
+					<object class="NSMutableDictionary" key="actions">
+						<string key="NS.key.0">setPreferences:</string>
+						<string key="NS.object.0">id</string>
+					</object>
+					<object class="NSMutableDictionary" key="outlets">
+						<bool key="EncodedWithXMLCoder">YES</bool>
+						<object class="NSMutableArray" key="dict.sortedKeys">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>gh_LoginField</string>
+							<string>gh_TokenField</string>
+						</object>
+						<object class="NSMutableArray" key="dict.values">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>id</string>
+							<string>id</string>
+						</object>
+					</object>
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
 						<string key="majorKey">IBUserSource</string>
 						<string key="minorKey"/>

@@ -8,7 +8,18 @@
 
 class GEPrefWindowController
   attr_accessor :preferencesWindow
+  attr_accessor :gh_LoginField
+  attr_accessor :gh_TokenField
+  
+  def awakeFromNib()
+    gh_LoginField.stringValue = preferences.user.login
+    gh_TokenField.stringValue = preferences.user.token
+  end
   
   def setPreferences(sender)
+    preferences.user.login = gh_LoginField.stringValue
+    preferences.user.token = gh_TokenField.stringValue
+    sender.window.close()
   end
+    
 end

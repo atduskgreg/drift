@@ -20,7 +20,7 @@ class GEDocument < NSDocument
   end
   
   def textDidChange(notification)
-    NSLog(self.inspect)
+    NSLog(self.text_view.textStorage.string)
     self.view_contents = self.text_view.textStorage
   end
   
@@ -32,6 +32,10 @@ class GEDocument < NSDocument
     self.text_view.window.setTitle("#{gist.title} - gist.github.com/#{gist.gist_id}")
     self.text_view.setString(gist.body)
     self.current_gist = gist
+  end
+  
+  def save(menuItem)
+    captureGistTitleName(menuItem)  
   end
   
   def postGist(gist_content, filename)

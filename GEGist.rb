@@ -33,8 +33,12 @@ class GEGist
      :body => @body }
   end
   
+  def update(owner)
+    owner.library.gists.reject!{|g| g[:gist_id] == self.gist_id}
+    self.save(owner)
+  end
+  
   def save(owner)
-    NSLog("owner: #{owner.inspect}")
     owner.library.gists << self.to_h
     owner.library.flush
   end

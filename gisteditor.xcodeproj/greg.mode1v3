@@ -278,7 +278,7 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>2</integer>
+									<integer>4</integer>
 									<integer>1</integer>
 									<integer>0</integer>
 								</array>
@@ -321,7 +321,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>GEDocument.rb</string>
+								<string>GEGist.rb</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -329,11 +329,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>GEDocument.rb</string>
+										<string>GEGist.rb</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>377712B51028FCAF0027C60B</string>
+										<string>377712FD102A1BC40027C60B</string>
 										<key>history</key>
 										<array>
 											<string>37902CD30FD6F6F100DE3FDE</string>
@@ -341,12 +341,12 @@
 											<string>379576080FF5FAF700B4A97E</string>
 											<string>3777122F1028F4A10027C60B</string>
 											<string>377712351028F4A10027C60B</string>
-											<string>377712811028FA3D0027C60B</string>
-											<string>377712941028FB110027C60B</string>
 											<string>377712961028FB110027C60B</string>
 											<string>377712A41028FBE60027C60B</string>
 											<string>377712B11028FC9B0027C60B</string>
-											<string>377712B21028FC9B0027C60B</string>
+											<string>377712D4102A19690027C60B</string>
+											<string>377712F4102A1B1A0027C60B</string>
+											<string>377712F5102A1B1A0027C60B</string>
 										</array>
 										<key>prevStack</key>
 										<array>
@@ -421,6 +421,29 @@
 											<string>377712A51028FBE60027C60B</string>
 											<string>377712A61028FBE60027C60B</string>
 											<string>377712B31028FC9B0027C60B</string>
+											<string>377712C3102A18060027C60B</string>
+											<string>377712C4102A18060027C60B</string>
+											<string>377712C5102A18060027C60B</string>
+											<string>377712C6102A18060027C60B</string>
+											<string>377712CA102A18280027C60B</string>
+											<string>377712CB102A18280027C60B</string>
+											<string>377712CC102A18280027C60B</string>
+											<string>377712CD102A18280027C60B</string>
+											<string>377712D6102A19690027C60B</string>
+											<string>377712D7102A19690027C60B</string>
+											<string>377712D8102A19690027C60B</string>
+											<string>377712D9102A19690027C60B</string>
+											<string>377712DA102A19690027C60B</string>
+											<string>377712DB102A19690027C60B</string>
+											<string>377712DC102A19690027C60B</string>
+											<string>377712DD102A19690027C60B</string>
+											<string>377712DE102A19690027C60B</string>
+											<string>377712DF102A19690027C60B</string>
+											<string>377712EB102A19DB0027C60B</string>
+											<string>377712F0102A19FE0027C60B</string>
+											<string>377712F6102A1B1A0027C60B</string>
+											<string>377712F7102A1B1A0027C60B</string>
+											<string>377712F8102A1B1A0027C60B</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>

@@ -20,7 +20,6 @@ class GEDocument < NSDocument
   end
   
   def textDidChange(notification)
-    NSLog(self.text_view.textStorage.string)
     self.view_contents = self.text_view.textStorage
   end
   
@@ -35,7 +34,42 @@ class GEDocument < NSDocument
   end
   
   def save(menuItem)
-    captureGistTitleName(menuItem)  
+    # HERE: has current_gist been saved before? If so, do a put!
+    if self.current_gist
+      putGist(self.current_gist)
+    else
+      captureGistTitleName(menuItem)  
+    end
+  end
+  
+  def updateGistFromCurrentDocumentState(aGist)
+    #TODO: add updated_at timestamp
+    aGist.body = self.view_contents.string
+  end
+  
+  def putGist(aGist)
+    updateGistFromCurrentDocumentState(aGist)
+    
+    post = "_method=put&file_contents[#{aGist.title}]=#{aGist.body}&file_ext[#{aGist.title}]=.#{aGist.title.split(".").last}&file_name[#{aGist.title}]=#{aGist.title}&login=#{preferences.user.login}&token=#{preferences.user.token}"
+    postData = post.dataUsingEncoding(NSASCIIStringEncoding,
+                                      allowLossyConversion:true)
+    postLength = NSString.stringWithFormat("%d", postData.length)
+    request = NSMutableURLRequest.alloc.init
+    request.setURL(NSURL.URLWithString("http://gist.github.com/gists/#{aGist.gist_id}"))
+    request.setHTTPMethod("POST")
+    request.setValue(postLength, forHTTPHeaderField:"Content-Length")
+    request.setValue("application/x-www-form-urlencoded", forHTTPHeaderField:"Content-Type")
+    request.setHTTPBody(postData)
+    
+    thisDoc = self
+    delegate = ConnectionDelegate.new(self) do |doc|
+      aGist.update(thisDoc)
+      thisDoc.text_view.window.setTitle("#{aGist.title} - gist.github.com/#{aGist.gist_id}")
+      `echo "http://gist.github.com/#{aGist.gist_id}" | pbcopy`
+    end
+    
+    NSURLConnection.connectionWithRequest(request, delegate:delegate)
+    
   end
   
   def postGist(gist_content, filename)

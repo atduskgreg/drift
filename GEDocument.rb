@@ -13,6 +13,7 @@ class GEDocument < NSDocument
   attr_accessor :gist_title_window
   attr_accessor :current_gist
   attr_accessor :associated_library
+  attr_accessor :progressBar
   
   def applicationDidFinishLaunching(notification)
 
@@ -27,6 +28,14 @@ class GEDocument < NSDocument
     @library ||= GEGistLibrary.new
   end
   
+  def startProgressIndicator
+    self.progressBar.startAnimation(self)
+  end
+  
+  def endProgressIndicator
+    self.progressBar.stopAnimation(self)
+  end
+  
   def setGist(gist)
     self.text_view.window.setTitle("#{gist.title} - gist.github.com/#{gist.gist_id}")
     self.text_view.setString(gist.body)
@@ -34,7 +43,6 @@ class GEDocument < NSDocument
   end
   
   def save(menuItem)
-    # HERE: has current_gist been saved before? If so, do a put!
     if self.current_gist
       putGist(self.current_gist)
     else

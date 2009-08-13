@@ -15,15 +15,18 @@ class ConnectionDelegate
   def initialize(parent, &block)
     @parent = parent
     @block = block
+    
+    @parent.startProgressIndicator
   end
 
   def connectionDidFinishLoading(connection)
-      NSLog(@receivedData.inspect)
+    NSLog(@receivedData.inspect)
 
     doc = NSXMLDocument.alloc.initWithData(@receivedData,
                                            options:NSXMLDocumentValidate,
                                            error:nil)
 
+    @parent.endProgressIndicator
     if doc
       @block.call(doc)
     else

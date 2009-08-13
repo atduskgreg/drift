@@ -34,11 +34,8 @@ class GEGist
   end
   
   def update(owner)
-    NSLog("about to reject: #{owner.library.gists.length}")
     owner.library.gists.reject!{|g| g[:gist_id] == self.gist_id}
-    NSLog("about to save: #{owner.library.gists.length}")
     self.save(owner)
-    NSLog("saved: #{owner.library.gists.length}")
   end
   
   def save(owner)

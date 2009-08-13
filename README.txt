@@ -7,6 +7,6 @@ TODO:
 - control-click menu to put gist url in clipboard
 - control-click menu to remove gist from tracked gists
 - control-click menu to refresh gist from server
+- control-click menu to delete gists
 - clean up some of the logging
-- create a new gist without opening a new window
 - fetch all the gists belonging to the user (if we have gh info)

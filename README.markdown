@@ -8,7 +8,7 @@ Drift is a [Gist](http://gist.github.com)-backed text editor written in [MacRuby
 Features
 ---------
 
-* Create an upload new gists
+* Create and upload new gists
 * Edit and update existing gists (created with Drift)
 * Store github credentials
 * Display activity when going over the wire to GitHub
@@ -18,6 +18,8 @@ Features
 TODO:
 --------
 
+* deal with save prompt on quit for unsaved docs
+* rename GEDocument's associated_library to something that indicates it's a tableView and not a library; like maybe "associatedTableView"
 * break out functionality for copying gist url
 * error handling on talking to GH
 * make creating a new document not open a new window

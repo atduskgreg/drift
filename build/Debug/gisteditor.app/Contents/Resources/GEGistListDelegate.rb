@@ -18,17 +18,13 @@ class GEGistListDelegate
   end
   
   def tableViewSelectionDidChange(notification)
-    gist = GEGist.new(gistsSortedByName[notification.object.selectedRow])
+    gist = GEGist.new(associatedDocument.library.gistsSortedByName[notification.object.selectedRow])
     associatedDocument.setGist(gist)
   end
 
-  def gistsSortedByName
-    associatedDocument.library.gists.sort_by{|g| g["title"] || g["gist_id"]}
-  end
-
   def tableView(tableView, objectValueForTableColumn:column, row:row)   
-    if row < gistsSortedByName.length
-      return gistsSortedByName[row].valueForKey("title") || "gist##{gistsSortedByName[row].valueForKey('gist_id')}"
+    if row < associatedDocument.library.gistsSortedByName.length
+      return associatedDocument.library.gistsSortedByName[row].valueForKey("title") || "gist##{associatedDocument.library.gistsSortedByName[row].valueForKey('gist_id')}"
     end
     nil
   end

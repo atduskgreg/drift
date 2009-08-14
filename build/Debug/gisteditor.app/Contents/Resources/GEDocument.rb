@@ -24,9 +24,7 @@ class GEDocument < NSDocument
   end
   
   def windowControllerDidLoadNib(windowController)
-    NSLog("didLoadNib?")
     self.octocatView.setImage(GEDocument.octocat_happy)
-    NSLog(self.octocatView.image.inspect)
   end
   
   def textDidChange(notification)
@@ -46,24 +44,15 @@ class GEDocument < NSDocument
   end
   
   def startProgressIndicator(message)
-
-    # self.gistListScrollView.setFrameSize(NSSize.new(228, 669))
-    # self.gistListScrollView.display
-
     self.progressDescription.stringValue = message
-    NSLog(self.progressDescription.stringValue)
     self.progressZone.setHidden(false)
     self.progressZone.display
     self.progressBar.startAnimation(self)
   end
   
   def endProgressIndicator
-    NSLog("endProgressIndicator")
     self.progressZone.setHidden(true)
     self.progressZone.display
-    # self.gistListScrollView.setFrameSize(NSSize.new(228, 719))
-    # self.gistListScrollView.display
-    
     self.progressBar.stopAnimation(self)
   end
   
@@ -71,21 +60,24 @@ class GEDocument < NSDocument
     self.text_view.window.setTitle("#{gist.title} - gist.github.com/#{gist.gist_id}")
     self.text_view.setString(gist.body)
     self.current_gist = gist
+    NSLog("Gist set to: #{self.current_gist.inspect}")
   end
   
   def save(menuItem)
     if self.current_gist
       putGist(self.current_gist)
-    else
+    else # creating a new one
       captureGistTitleName(menuItem)  
     end
   end
-  
+
+  # TODO: add updated_at timestamp  
   def updateGistFromCurrentDocumentState(aGist)
-    #TODO: add updated_at timestamp
     aGist.body = self.view_contents.string
   end
   
+  
+  # TODO: further unify networking code between putGist and postGist
   def putGist(aGist)
     updateGistFromCurrentDocumentState(aGist)
     
@@ -108,7 +100,6 @@ class GEDocument < NSDocument
     end
     
     NSURLConnection.connectionWithRequest(request, delegate:delegate)
-    
   end
   
   def postGist(gist_content, filename)
@@ -129,9 +120,17 @@ class GEDocument < NSDocument
       gist.title = filename
       gist.body = gist_content
       gist.save(thisDoc)
-      thisDoc.current_gist = gist
-      thisDoc.text_view.window.setTitle("#{filename} - gist.github.com/#{gist.gist_id}")
+      thisDoc.setGist(gist)
       thisDoc.associated_library.reloadData
+      
+      # highlight newly created gist
+      NSLog("Current Gist: #{thisDoc.current_gist}")
+      thisDoc.library.gistsSortedByName.each_with_index do |gist, i|
+        if gist["gist_id"] == thisDoc.current_gist.gist_id
+          thisDoc.associated_library.selectRowIndexes(NSIndexSet.alloc.initWithIndex(i), byExtendingSelection:false)
+          NSLog("The index is: #{i}")
+        end
+      end
       `echo "http://gist.github.com/#{gist.gist_id}" | pbcopy`
     end
     
@@ -147,7 +146,6 @@ class GEDocument < NSDocument
   def actuallySendGist(sender)
     postGist(self.view_contents.string, self.gist_title.stringValue)
     NSApp.endSheet(gist_title_window)
-    
     gist_title_window.orderOut(sender)
   end
   

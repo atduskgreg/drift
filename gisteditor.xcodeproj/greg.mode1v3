@@ -333,7 +333,7 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>370E64EA1035F2B90090C80E</string>
+										<string>370E64EB1035F4C20090C80E</string>
 										<key>history</key>
 										<array>
 											<string>37902CD30FD6F6F100DE3FDE</string>
@@ -580,8 +580,8 @@
 	<array>
 		<string>37902BD30FD5F14500DE3FDE</string>
 		<string>1CD10A99069EF8BA00B06720</string>
-		<string>/Users/greg/code/gisteditor/gisteditor.xcodeproj</string>
 		<string>1C78EAAD065D492600B07095</string>
+		<string>/Users/greg/code/gisteditor/gisteditor.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
 	<string>-12 55 1276 723 0 0 1280 778 </string>

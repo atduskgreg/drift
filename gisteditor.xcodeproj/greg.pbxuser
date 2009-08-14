@@ -157,6 +157,7 @@
 			370E64E61035F1F70090C80E /* PBXTextBookmark */ = 370E64E61035F1F70090C80E /* PBXTextBookmark */;
 			370E64E81035F2560090C80E /* PBXTextBookmark */ = 370E64E81035F2560090C80E /* PBXTextBookmark */;
 			370E64EA1035F2B90090C80E /* PBXTextBookmark */ = 370E64EA1035F2B90090C80E /* PBXTextBookmark */;
+			370E64EB1035F4C20090C80E /* PBXTextBookmark */ = 370E64EB1035F4C20090C80E /* PBXTextBookmark */;
 			374E6A7A0FEF635F0062A2C9 = 374E6A7A0FEF635F0062A2C9 /* PBXTextBookmark */;
 			374E6ADB0FEF699A0062A2C9 = 374E6ADB0FEF699A0062A2C9 /* PBXTextBookmark */;
 			377712351028F4A10027C60B = 377712351028F4A10027C60B /* PBXTextBookmark */;
@@ -717,7 +718,7 @@
 		fRef = 37902BCB0FD5F11400DE3FDE /* GEDocument.rb */;
 		name = "GEDocument.rb: 141";
 		rLen = 0;
-		rLoc = 4839;
+		rLoc = 4782;
 		rType = 0;
 		vrLen = 768;
 		vrLoc = 4574;
@@ -897,7 +898,7 @@
 		fRef = 37902BCB0FD5F11400DE3FDE /* GEDocument.rb */;
 		name = "GEDocument.rb: 145";
 		rLen = 0;
-		rLoc = 5132;
+		rLoc = 5075;
 		rType = 0;
 		vrLen = 857;
 		vrLoc = 3986;
@@ -927,7 +928,7 @@
 		fRef = 37902BCB0FD5F11400DE3FDE /* GEDocument.rb */;
 		name = "GEDocument.rb: 145";
 		rLen = 0;
-		rLoc = 5132;
+		rLoc = 5075;
 		rType = 0;
 		vrLen = 841;
 		vrLoc = 4147;
@@ -947,7 +948,7 @@
 		fRef = 37902BCB0FD5F11400DE3FDE /* GEDocument.rb */;
 		name = "GEDocument.rb: 145";
 		rLen = 0;
-		rLoc = 5132;
+		rLoc = 5075;
 		rType = 0;
 		vrLen = 891;
 		vrLoc = 3952;
@@ -1007,7 +1008,7 @@
 		fRef = 37902BCB0FD5F11400DE3FDE /* GEDocument.rb */;
 		name = "GEDocument.rb: 145";
 		rLen = 0;
-		rLoc = 5132;
+		rLoc = 5075;
 		rType = 0;
 		vrLen = 901;
 		vrLoc = 4178;
@@ -1017,7 +1018,7 @@
 		fRef = 37902BCB0FD5F11400DE3FDE /* GEDocument.rb */;
 		name = "GEDocument.rb: 145";
 		rLen = 0;
-		rLoc = 5132;
+		rLoc = 5075;
 		rType = 0;
 		vrLen = 901;
 		vrLoc = 4178;
@@ -1037,7 +1038,7 @@
 		fRef = 37902BCB0FD5F11400DE3FDE /* GEDocument.rb */;
 		name = "GEDocument.rb: 145";
 		rLen = 0;
-		rLoc = 5132;
+		rLoc = 5075;
 		rType = 0;
 		vrLen = 901;
 		vrLoc = 4178;
@@ -1077,7 +1078,7 @@
 		fRef = 37902BCB0FD5F11400DE3FDE /* GEDocument.rb */;
 		name = "GEDocument.rb: 145";
 		rLen = 0;
-		rLoc = 5132;
+		rLoc = 5075;
 		rType = 0;
 		vrLen = 901;
 		vrLoc = 4178;
@@ -1107,7 +1108,7 @@
 		fRef = 37902BCB0FD5F11400DE3FDE /* GEDocument.rb */;
 		name = "GEDocument.rb: 143";
 		rLen = 0;
-		rLoc = 5132;
+		rLoc = 5075;
 		rType = 0;
 		vrLen = 909;
 		vrLoc = 4633;
@@ -1117,7 +1118,7 @@
 		fRef = 37902BCB0FD5F11400DE3FDE /* GEDocument.rb */;
 		name = "GEDocument.rb: 143";
 		rLen = 0;
-		rLoc = 5132;
+		rLoc = 5075;
 		rType = 0;
 		vrLen = 907;
 		vrLoc = 4633;
@@ -1137,7 +1138,7 @@
 		fRef = 37902BCB0FD5F11400DE3FDE /* GEDocument.rb */;
 		name = "GEDocument.rb: 128";
 		rLen = 0;
-		rLoc = 4665;
+		rLoc = 4608;
 		rType = 0;
 		vrLen = 1262;
 		vrLoc = 3274;
@@ -1147,7 +1148,7 @@
 		fRef = 37902BCB0FD5F11400DE3FDE /* GEDocument.rb */;
 		name = "GEDocument.rb: 128";
 		rLen = 0;
-		rLoc = 4665;
+		rLoc = 4608;
 		rType = 0;
 		vrLen = 1241;
 		vrLoc = 3274;
@@ -1157,7 +1158,7 @@
 		fRef = 37902BCB0FD5F11400DE3FDE /* GEDocument.rb */;
 		name = "GEDocument.rb: 133";
 		rLen = 0;
-		rLoc = 4665;
+		rLoc = 4608;
 		rType = 0;
 		vrLen = 898;
 		vrLoc = 3979;
@@ -1166,8 +1167,8 @@
 		isa = PBXTextBookmark;
 		fRef = 37902BCB0FD5F11400DE3FDE /* GEDocument.rb */;
 		name = "GEDocument.rb: 131";
-		rLen = 38;
-		rLoc = 4605;
+		rLen = 0;
+		rLoc = 4586;
 		rType = 0;
 		vrLen = 961;
 		vrLoc = 3847;
@@ -1177,10 +1178,20 @@
 		fRef = 37902BCB0FD5F11400DE3FDE /* GEDocument.rb */;
 		name = "GEDocument.rb: 130";
 		rLen = 0;
-		rLoc = 4575;
+		rLoc = 4556;
 		rType = 0;
 		vrLen = 993;
 		vrLoc = 3847;
+	};
+	370E64EB1035F4C20090C80E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 37902BCB0FD5F11400DE3FDE /* GEDocument.rb */;
+		name = "GEDocument.rb: 126";
+		rLen = 0;
+		rLoc = 4339;
+		rType = 0;
+		vrLen = 1101;
+		vrLoc = 3662;
 	};
 	374E6A7A0FEF635F0062A2C9 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
@@ -1321,9 +1332,9 @@
 	};
 	37902BCB0FD5F11400DE3FDE /* GEDocument.rb */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1852, 3040}}";
-			sepNavSelRange = "{4575, 0}";
-			sepNavVisRange = "{3847, 993}";
+			sepNavIntBoundsRect = "{{0, 0}, {1852, 3249}}";
+			sepNavSelRange = "{4339, 0}";
+			sepNavVisRange = "{3662, 1101}";
 			sepNavWindowFrame = "{{15, 0}, {845, 778}}";
 		};
 	};
@@ -1525,7 +1536,7 @@
 		fRef = 37902BCB0FD5F11400DE3FDE /* GEDocument.rb */;
 		name = "GEDocument.rb: 143";
 		rLen = 0;
-		rLoc = 6015;
+		rLoc = 5958;
 		rType = 0;
 		vrLen = 1261;
 		vrLoc = 1061;
@@ -1555,7 +1566,7 @@
 		fRef = 37902BCB0FD5F11400DE3FDE /* GEDocument.rb */;
 		name = "GEDocument.rb: 143";
 		rLen = 0;
-		rLoc = 6015;
+		rLoc = 5958;
 		rType = 0;
 		vrLen = 1152;
 		vrLoc = 2269;
@@ -1575,7 +1586,7 @@
 		fRef = 37902BCB0FD5F11400DE3FDE /* GEDocument.rb */;
 		name = "GEDocument.rb: 143";
 		rLen = 0;
-		rLoc = 6015;
+		rLoc = 5958;
 		rType = 0;
 		vrLen = 1091;
 		vrLoc = 2434;
@@ -1595,7 +1606,7 @@
 		fRef = 37902BCB0FD5F11400DE3FDE /* GEDocument.rb */;
 		name = "GEDocument.rb: 143";
 		rLen = 0;
-		rLoc = 6015;
+		rLoc = 5958;
 		rType = 0;
 		vrLen = 1091;
 		vrLoc = 2434;

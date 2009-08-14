@@ -20,10 +20,10 @@ TODO:
 
 * deal with save prompt on quit for unsaved docs
 * rename GEDocument's associated_library to something that indicates it's a tableView and not a library; like maybe "associatedTableView"
+* unifying networking code to remove duplication from GEDocument#putGist and GEDocument#postGist
 * break out functionality for copying gist url
 * error handling on talking to GH
 * make creating a new document not open a new window
-* highlight new gist in table view when created
 * figure out why GEGistListDelegate doesn't have access to associatedDocument in numberOfRowsInTableView
 * control-click menu to put gist url in clipboard
 * control-click menu to remove gist from tracked gists

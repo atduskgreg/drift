@@ -14,25 +14,56 @@ class GEDocument < NSDocument
   attr_accessor :current_gist
   attr_accessor :associated_library
   attr_accessor :progressBar
+  attr_accessor :progressDescription
+  attr_accessor :progressZone
+  attr_accessor :gistListScrollView
+  attr_accessor :octocatView
   
   def applicationDidFinishLaunching(notification)
-
     # pass
+  end
+  
+  def windowControllerDidLoadNib(windowController)
+    NSLog("didLoadNib?")
+    self.octocatView.setImage(GEDocument.octocat_happy)
+    NSLog(self.octocatView.image.inspect)
   end
   
   def textDidChange(notification)
     self.view_contents = self.text_view.textStorage
   end
   
+  def self.octocat_happy
+    @@octocat_happy ||= NSImage.alloc.initWithContentsOfFile(NSBundle.mainBundle.pathForImageResource("octocat_happy"))
+  end
+  
+  def octocat_happy
+    @octocat_happy ||= GEDocument.octocat_happy
+  end
+  
   def library
     @library ||= GEGistLibrary.new
   end
   
-  def startProgressIndicator
+  def startProgressIndicator(message)
+
+    # self.gistListScrollView.setFrameSize(NSSize.new(228, 669))
+    # self.gistListScrollView.display
+
+    self.progressDescription.stringValue = message
+    NSLog(self.progressDescription.stringValue)
+    self.progressZone.setHidden(false)
+    self.progressZone.display
     self.progressBar.startAnimation(self)
   end
   
   def endProgressIndicator
+    NSLog("endProgressIndicator")
+    self.progressZone.setHidden(true)
+    self.progressZone.display
+    # self.gistListScrollView.setFrameSize(NSSize.new(228, 719))
+    # self.gistListScrollView.display
+    
     self.progressBar.stopAnimation(self)
   end
   
@@ -70,7 +101,7 @@ class GEDocument < NSDocument
     request.setHTTPBody(postData)
     
     thisDoc = self
-    delegate = ConnectionDelegate.new(self) do |doc|
+    delegate = ConnectionDelegate.new(self, "Updating gist") do |doc|
       aGist.update(thisDoc)
       thisDoc.text_view.window.setTitle("#{aGist.title} - gist.github.com/#{aGist.gist_id}")
       `echo "http://gist.github.com/#{aGist.gist_id}" | pbcopy`
@@ -93,7 +124,7 @@ class GEDocument < NSDocument
     request.setHTTPBody(postData)
     
     thisDoc = self
-    delegate = ConnectionDelegate.new(self) do |doc|
+    delegate = ConnectionDelegate.new(self, "Creating gist") do |doc|
       gist =  GEGist.new_from_xml(doc)
       gist.title = filename
       gist.body = gist_content

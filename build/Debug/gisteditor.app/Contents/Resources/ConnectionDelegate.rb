@@ -12,11 +12,12 @@ require "cgi"
 
 class ConnectionDelegate
 
-  def initialize(parent, &block)
+  def initialize(parent, message, &block)
     @parent = parent
+    @message = message
     @block = block
     
-    @parent.startProgressIndicator
+    @parent.startProgressIndicator(message)
   end
 
   def connectionDidFinishLoading(connection)

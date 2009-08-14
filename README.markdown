@@ -14,6 +14,11 @@ Features
 * Display activity when going over the wire to GitHub
 * Copy gist url into clipboard on creation
 
+Drift Needs a Logo!
+-------------------
+
+Do you have slick Mac app logo-creating ability? Now accepting submissions: greg DOT borenstein AT gmail DOT com
+
 
 TODO:
 --------

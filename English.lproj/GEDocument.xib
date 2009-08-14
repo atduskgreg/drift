@@ -224,9 +224,9 @@
 											<reference key="NSCornerView" ref="89919400"/>
 											<bytes key="NSScrollAmts">QSAAAEEgAABBmAAAQZgAAA</bytes>
 										</object>
-										<object class="NSImageView" id="177310856">
+										<object class="NSImageView" id="366458989">
 											<reference key="NSNextResponder" ref="40838267"/>
-											<int key="NSvFlags">268</int>
+											<int key="NSvFlags">256</int>
 											<object class="NSMutableSet" key="NSDragTypes">
 												<bool key="EncodedWithXMLCoder">YES</bool>
 												<object class="NSMutableArray" key="set.sortedObjects">
@@ -242,7 +242,7 @@
 											<string key="NSFrame">{{8, 8}, {48, 41}}</string>
 											<reference key="NSSuperview" ref="40838267"/>
 											<bool key="NSEnabled">YES</bool>
-											<object class="NSImageCell" key="NSCell" id="867627167">
+											<object class="NSImageCell" key="NSCell" id="518316525">
 												<int key="NSCellFlags">130560</int>
 												<int key="NSCellFlags2">33554432</int>
 												<int key="NSAlign">0</int>
@@ -254,12 +254,12 @@
 										</object>
 										<object class="NSCustomView" id="997474561">
 											<reference key="NSNextResponder" ref="40838267"/>
-											<int key="NSvFlags">-2147483380</int>
+											<int key="NSvFlags">-2147483390</int>
 											<object class="NSMutableArray" key="NSSubviews">
 												<bool key="EncodedWithXMLCoder">YES</bool>
 												<object class="NSProgressIndicator" id="1052206626">
 													<reference key="NSNextResponder" ref="997474561"/>
-													<int key="NSvFlags">1292</int>
+													<int key="NSvFlags">1294</int>
 													<object class="NSPSMatrix" key="NSDrawMatrix"/>
 													<string key="NSFrame">{{-2, 7}, {145, 20}}</string>
 													<reference key="NSSuperview" ref="997474561"/>
@@ -269,7 +269,7 @@
 												</object>
 												<object class="NSTextField" id="356201246">
 													<reference key="NSNextResponder" ref="997474561"/>
-													<int key="NSvFlags">268</int>
+													<int key="NSvFlags">270</int>
 													<string key="NSFrame">{{-2, 29}, {141, 17}}</string>
 													<reference key="NSSuperview" ref="997474561"/>
 													<bool key="NSEnabled">YES</bool>
@@ -787,7 +787,7 @@
 					<object class="IBOutletConnection" key="connection">
 						<string key="label">octocatView</string>
 						<reference key="source" ref="512844837"/>
-						<reference key="destination" ref="177310856"/>
+						<reference key="destination" ref="366458989"/>
 					</object>
 					<int key="connectionID">100093</int>
 				</object>
@@ -988,7 +988,7 @@
 						<object class="NSMutableArray" key="children">
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<reference ref="638551810"/>
-							<reference ref="177310856"/>
+							<reference ref="366458989"/>
 							<reference ref="997474561"/>
 						</object>
 						<reference key="parent" ref="195632884"/>
@@ -1060,17 +1060,17 @@
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">100091</int>
-						<reference key="object" ref="177310856"/>
+						<reference key="object" ref="366458989"/>
 						<object class="NSMutableArray" key="children">
 							<bool key="EncodedWithXMLCoder">YES</bool>
-							<reference ref="867627167"/>
+							<reference ref="518316525"/>
 						</object>
 						<reference key="parent" ref="40838267"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">100092</int>
-						<reference key="object" ref="867627167"/>
-						<reference key="parent" ref="177310856"/>
+						<reference key="object" ref="518316525"/>
+						<reference key="parent" ref="366458989"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">100081</int>

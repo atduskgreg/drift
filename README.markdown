@@ -27,6 +27,11 @@ Man, these icons are fugly. Help! greg DOT borenstein AT gmail DOT com
 TODO:
 --------
 
+* import all gists belonging to the user (if we have gh info)
+* get name of newly imported gists
+* save imported gists to library
+* get gist list to scroll
+
 * deal with save prompt on quit for unsaved docs
 * rename GEDocument's associated_library to something that indicates it's a tableView and not a library; like maybe "associatedTableView"
 * unifying networking code to remove duplication from GEDocument#putGist and GEDocument#postGist
@@ -37,5 +42,4 @@ TODO:
 * button to delete gists
 * all these buttons should also be menu items/hot keys
 * clean up some of the logging
-* import all gists belonging to the user (if we have gh info)
 * automatic updating of gist on a timed basis

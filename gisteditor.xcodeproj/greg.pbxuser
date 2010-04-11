@@ -922,6 +922,13 @@
 		vrLen = 408;
 		vrLoc = 0;
 	};
+	376167C51171AB550072CFF4 /* comment_48.png */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = image.png;
+		name = comment_48.png;
+		path = /Users/greg/Desktop/function_icon_set/comment_48.png;
+		sourceTree = "<absolute>";
+	};
 	376167C91171ABAD0072CFF4 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
 		fRef = 37895EFB0FEDDC08005EE5EE /* Preferences.rb */;
@@ -1399,6 +1406,13 @@
 		rType = 0;
 		vrLen = 732;
 		vrLoc = 726;
+	};
+	376168171171B99A0072CFF4 /* box_download_48.png */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = image.png;
+		name = box_download_48.png;
+		path = /Users/greg/Desktop/function_icon_set/box_download_48.png;
+		sourceTree = "<absolute>";
 	};
 	376168191171B9C80072CFF4 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
@@ -2441,9 +2455,9 @@
 	};
 	37902BCB0FD5F11400DE3FDE /* GEDocument.rb */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1852, 4199}}";
-			sepNavSelRange = "{3074, 0}";
-			sepNavVisRange = "{2814, 693}";
+			sepNavIntBoundsRect = "{{0, 0}, {1852, 4484}}";
+			sepNavSelRange = "{3140, 32}";
+			sepNavVisRange = "{2861, 877}";
 			sepNavWindowFrame = "{{15, 0}, {845, 778}}";
 		};
 	};

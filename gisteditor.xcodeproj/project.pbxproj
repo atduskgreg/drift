@@ -12,8 +12,8 @@
 		370E64441034C59D0090C80E /* octocat_happy.gif in Resources */ = {isa = PBXBuildFile; fileRef = 370E64431034C59D0090C80E /* octocat_happy.gif */; };
 		374E6A8A0FEF67480062A2C9 /* GEPrefWindowController.rb in Resources */ = {isa = PBXBuildFile; fileRef = 374E6A890FEF67480062A2C9 /* GEPrefWindowController.rb */; };
 		376167681171A1990072CFF4 /* GEGistListTableView.rb in Resources */ = {isa = PBXBuildFile; fileRef = 376167671171A1990072CFF4 /* GEGistListTableView.rb */; };
-		376167C61171AB550072CFF4 /* comment_48.png in Resources */ = {isa = PBXBuildFile; fileRef = 376167C51171AB550072CFF4 /* comment_48.png */; };
-		376168181171B99A0072CFF4 /* box_download_48.png in Resources */ = {isa = PBXBuildFile; fileRef = 376168171171B99A0072CFF4 /* box_download_48.png */; };
+		376168841171C8620072CFF4 /* comment_48.png in Resources */ = {isa = PBXBuildFile; fileRef = 376168821171C8620072CFF4 /* comment_48.png */; };
+		376168851171C8620072CFF4 /* box_download_48.png in Resources */ = {isa = PBXBuildFile; fileRef = 376168831171C8620072CFF4 /* box_download_48.png */; };
 		37895EFC0FEDDC08005EE5EE /* Preferences.rb in Resources */ = {isa = PBXBuildFile; fileRef = 37895EFB0FEDDC08005EE5EE /* Preferences.rb */; };
 		378DED890FDB0B3F00F1958C /* GEGist.rb in Resources */ = {isa = PBXBuildFile; fileRef = 378DED880FDB0B3F00F1958C /* GEGist.rb */; };
 		37902BCA0FD5F10500DE3FDE /* rb_main.rb in Resources */ = {isa = PBXBuildFile; fileRef = 37902BC90FD5F10500DE3FDE /* rb_main.rb */; };
@@ -42,8 +42,8 @@
 		370E64431034C59D0090C80E /* octocat_happy.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = octocat_happy.gif; sourceTree = "<group>"; };
 		374E6A890FEF67480062A2C9 /* GEPrefWindowController.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = GEPrefWindowController.rb; sourceTree = "<group>"; };
 		376167671171A1990072CFF4 /* GEGistListTableView.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = GEGistListTableView.rb; sourceTree = "<group>"; };
-		376167C51171AB550072CFF4 /* comment_48.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = comment_48.png; path = ../../Desktop/function_icon_set/comment_48.png; sourceTree = SOURCE_ROOT; };
-		376168171171B99A0072CFF4 /* box_download_48.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = box_download_48.png; path = ../../Desktop/function_icon_set/box_download_48.png; sourceTree = SOURCE_ROOT; };
+		376168821171C8620072CFF4 /* comment_48.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = comment_48.png; sourceTree = "<group>"; };
+		376168831171C8620072CFF4 /* box_download_48.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = box_download_48.png; sourceTree = "<group>"; };
 		37895EFB0FEDDC08005EE5EE /* Preferences.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = Preferences.rb; sourceTree = "<group>"; };
 		378DED880FDB0B3F00F1958C /* GEGist.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = GEGist.rb; sourceTree = "<group>"; };
 		37902BC90FD5F10500DE3FDE /* rb_main.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = rb_main.rb; sourceTree = "<group>"; };
@@ -136,8 +136,8 @@
 		2A37F4B8FDCFA73011CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				376168171171B99A0072CFF4 /* box_download_48.png */,
-				376167C51171AB550072CFF4 /* comment_48.png */,
+				376168821171C8620072CFF4 /* comment_48.png */,
+				376168831171C8620072CFF4 /* box_download_48.png */,
 				2A37F4B9FDCFA73011CA2CEA /* Credits.rtf */,
 				8D15AC360486D014006FF6A4 /* Info.plist */,
 				370E64431034C59D0090C80E /* octocat_happy.gif */,
@@ -214,8 +214,8 @@
 				374E6A8A0FEF67480062A2C9 /* GEPrefWindowController.rb in Resources */,
 				370E64441034C59D0090C80E /* octocat_happy.gif in Resources */,
 				376167681171A1990072CFF4 /* GEGistListTableView.rb in Resources */,
-				376167C61171AB550072CFF4 /* comment_48.png in Resources */,
-				376168181171B99A0072CFF4 /* box_download_48.png in Resources */,
+				376168841171C8620072CFF4 /* comment_48.png in Resources */,
+				376168851171C8620072CFF4 /* box_download_48.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

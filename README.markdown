@@ -3,7 +3,7 @@ Drift
 
 Drift is a [Gist](http://gist.github.com)-backed text editor written in [MacRuby](http://www.macruby.org/). Depending on how you look at it, it either lets you edit your gists, or gives you an always-already versioned, cloud-backed text-editor. Here's a screenshot:
 
-![Drift circa 4/11/10](http://img.skitch.com/20100411-1yxsmj41xfi6aki7q7xhp53bq3.jpg)
+![Drift circa 4/11/10](http://img.skitch.com/20100411-j4frnk2m3p5jtbtkthh3sqbimj.jpg)
 
 Features
 ---------

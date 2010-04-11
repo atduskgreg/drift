@@ -19,7 +19,7 @@ class GEDocument < NSDocument
   attr_accessor :gistListScrollView
   attr_accessor :octocatView
   
-  attr_accessor :gist_url_copy_button
+  attr_accessor :gist_url_copy_button, :update_gist_button
   
   def applicationDidFinishLaunching(notification)
     # pass
@@ -28,6 +28,8 @@ class GEDocument < NSDocument
   def windowControllerDidLoadNib(windowController)
     self.octocatView.setImage(GEDocument.octocat_happy)
     self.gist_url_copy_button.setImage(GEDocument.copy_gist_url_button_image)
+    self.update_gist_button.setImage(GEDocument.update_gist_image)
+
   end
   
   def textDidChange(notification)
@@ -40,6 +42,14 @@ class GEDocument < NSDocument
   
   def self.copy_gist_url_button_image
     @@copy_gist_url_button_image ||= NSImage.alloc.initWithContentsOfFile(NSBundle.mainBundle.pathForImageResource("comment_48.png"))
+  end
+  
+  def self.update_gist_image
+    @@update_gist_image ||= NSImage.alloc.initWithContentsOfFile(NSBundle.mainBundle.pathForImageResource("box_download_48.png"))
+  end
+  
+  def pullCurrentGist(sender)
+    getGist(current_gist) if current_gist
   end
   
   def copyCurrentGistUrl(sender)
@@ -97,6 +107,19 @@ class GEDocument < NSDocument
     aGist.body = self.view_contents.string
   end
   
+  def updateDocumentStateFromGist(aGist)
+    self.text_view.setString(aGist.body)
+  end
+  
+
+  
+  def getGist(aGist)
+    new_contents = NSString.stringWithContentsOfURL(NSURL.URLWithString("http://gist.github.com/#{aGist.gist_id}.txt"))
+    NSLog(new_contents)
+    aGist.body = new_contents
+    aGist.update(self)
+    updateDocumentStateFromGist(aGist)
+  end
   
   # TODO: further unify networking code between putGist and postGist
   def putGist(aGist)

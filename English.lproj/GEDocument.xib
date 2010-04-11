@@ -465,12 +465,32 @@
 												<int key="NSCellFlags">-2080244224</int>
 												<int key="NSCellFlags2">134217728</int>
 												<string key="NSContents">url</string>
-												<object class="NSFont" key="NSSupport">
+												<object class="NSFont" key="NSSupport" id="24">
 													<string key="NSName">LucidaGrande</string>
 													<double key="NSSize">1.000000e+01</double>
 													<int key="NSfFlags">16</int>
 												</object>
 												<reference key="NSControlView" ref="643905025"/>
+												<int key="NSButtonFlags">-2033434369</int>
+												<int key="NSButtonFlags2">130</int>
+												<string key="NSAlternateContents"/>
+												<string key="NSKeyEquivalent"/>
+												<int key="NSPeriodicDelay">400</int>
+												<int key="NSPeriodicInterval">75</int>
+											</object>
+										</object>
+										<object class="NSButton" id="717019038">
+											<reference key="NSNextResponder" ref="645507211"/>
+											<int key="NSvFlags">268</int>
+											<string key="NSFrame">{{69, 663}, {51, 50}}</string>
+											<reference key="NSSuperview" ref="645507211"/>
+											<bool key="NSEnabled">YES</bool>
+											<object class="NSButtonCell" key="NSCell" id="448923075">
+												<int key="NSCellFlags">67239424</int>
+												<int key="NSCellFlags2">134217728</int>
+												<string key="NSContents"/>
+												<reference key="NSSupport" ref="24"/>
+												<reference key="NSControlView" ref="717019038"/>
 												<int key="NSButtonFlags">-2033434369</int>
 												<int key="NSButtonFlags2">130</int>
 												<string key="NSAlternateContents"/>
@@ -831,6 +851,22 @@
 					</object>
 					<int key="connectionID">100097</int>
 				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">update_gist_button</string>
+						<reference key="source" ref="512844837"/>
+						<reference key="destination" ref="717019038"/>
+					</object>
+					<int key="connectionID">100100</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBActionConnection" key="connection">
+						<string key="label">pullCurrentGist:</string>
+						<reference key="source" ref="512844837"/>
+						<reference key="destination" ref="717019038"/>
+					</object>
+					<int key="connectionID">100101</int>
+				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
 				<object class="NSArray" key="orderedObjects">
@@ -994,6 +1030,7 @@
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<reference ref="183766710"/>
 							<reference ref="643905025"/>
+							<reference ref="717019038"/>
 						</object>
 						<reference key="parent" ref="195632884"/>
 					</object>
@@ -1141,6 +1178,20 @@
 						<reference key="object" ref="539431517"/>
 						<reference key="parent" ref="643905025"/>
 					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">100098</int>
+						<reference key="object" ref="717019038"/>
+						<object class="NSMutableArray" key="children">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<reference ref="448923075"/>
+						</object>
+						<reference key="parent" ref="645507211"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">100099</int>
+						<reference key="object" ref="448923075"/>
+						<reference key="parent" ref="717019038"/>
+					</object>
 				</object>
 			</object>
 			<object class="NSMutableDictionary" key="flattenedProperties">
@@ -1189,6 +1240,8 @@
 					<string>100092.IBPluginDependency</string>
 					<string>100094.IBPluginDependency</string>
 					<string>100095.IBPluginDependency</string>
+					<string>100098.IBPluginDependency</string>
+					<string>100099.IBPluginDependency</string>
 					<string>5.IBEditorWindowLastContentRect</string>
 					<string>5.IBWindowTemplateEditedContentRect</string>
 					<string>5.ImportedFromIB2</string>
@@ -1242,8 +1295,10 @@
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
-					<string>{{53, 37}, {830, 719}}</string>
-					<string>{{53, 37}, {830, 719}}</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>{{184, 35}, {830, 719}}</string>
+					<string>{{184, 35}, {830, 719}}</string>
 					<reference ref="9"/>
 					<string>{{201, 387}, {507, 413}}</string>
 					<reference ref="9"/>
@@ -1272,7 +1327,7 @@
 				</object>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">100097</int>
+			<int key="maxID">100101</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -1280,8 +1335,17 @@
 				<object class="IBPartialClassDescription">
 					<string key="className">GEDocument</string>
 					<object class="NSMutableDictionary" key="actions">
-						<string key="NS.key.0">copyCurrentGistUrl:</string>
-						<string key="NS.object.0">id</string>
+						<bool key="EncodedWithXMLCoder">YES</bool>
+						<object class="NSMutableArray" key="dict.sortedKeys">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>copyCurrentGistUrl:</string>
+							<string>pullCurrentGist:</string>
+						</object>
+						<object class="NSMutableArray" key="dict.values">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>id</string>
+							<string>id</string>
+						</object>
 					</object>
 					<object class="NSMutableDictionary" key="outlets">
 						<bool key="EncodedWithXMLCoder">YES</bool>
@@ -1293,9 +1357,11 @@
 							<string>progressBar</string>
 							<string>progressDescription</string>
 							<string>progressZone</string>
+							<string>update_gist_button</string>
 						</object>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>id</string>
 							<string>id</string>
 							<string>id</string>
 							<string>id</string>

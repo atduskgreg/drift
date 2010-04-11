@@ -6,7 +6,7 @@
 #  Copyright (c) 2009 __MyCompanyName__. All rights reserved.
 #
 
-class GEGistListDelegate
+class GEGistListDelegate < NSResponder
   attr_accessor :associatedDocument
   
   def awakeFromNib()
@@ -17,6 +17,10 @@ class GEGistListDelegate
     @library.gists.length
   end
   
+  def rightMouseDown(theEvent)
+    NSLog("right mouse")
+  end
+
   def tableViewSelectionDidChange(notification)
     gist = GEGist.new(associatedDocument.library.gistsSortedByName[notification.object.selectedRow])
     associatedDocument.setGist(gist)

@@ -63,6 +63,10 @@ class GEDocument < NSDocument
     NSLog("Gist set to: #{self.current_gist.inspect}")
   end
   
+  def reviewUnsavedDocumentsWithAlertTitle(title, cancellable:bool, delegate:myDelegate, didReviewAllSelector:mySelector, contextInfo:sender)
+    NSLog("reviewUnsavedDocumentsWithAlertTitle")
+  end
+  
   def save(menuItem)
     if self.current_gist
       putGist(self.current_gist)

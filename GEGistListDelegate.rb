@@ -16,7 +16,7 @@ class GEGistListDelegate
     @library = GEGistLibrary.new
     @library.gists.length
   end
-  
+
   def tableViewSelectionDidChange(notification)
     gist = GEGist.new(associatedDocument.library.gistsSortedByName[notification.object.selectedRow])
     associatedDocument.setGist(gist)

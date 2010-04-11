@@ -63,6 +63,10 @@ class GEDocument < NSDocument
     NSLog("Gist set to: #{self.current_gist.inspect}")
   end
   
+  def reviewUnsavedDocumentsWithAlertTitle(title, cancellable:bool, delegate:myDelegate, didReviewAllSelector:mySelector, contextInfo:sender)
+    NSLog("reviewUnsavedDocumentsWithAlertTitle")
+  end
+  
   def save(menuItem)
     if self.current_gist
       putGist(self.current_gist)
@@ -123,12 +127,10 @@ class GEDocument < NSDocument
       thisDoc.setGist(gist)
       thisDoc.associated_library.reloadData
       
-      # highlight newly created gist
-      NSLog("Current Gist: #{thisDoc.current_gist}")
+      # highlight newly created gist (probably a better way out there)
       thisDoc.library.gistsSortedByName.each_with_index do |gist, i|
         if gist["gist_id"] == thisDoc.current_gist.gist_id
           thisDoc.associated_library.selectRowIndexes(NSIndexSet.alloc.initWithIndex(i), byExtendingSelection:false)
-          NSLog("The index is: #{i}")
         end
       end
       `echo "http://gist.github.com/#{gist.gist_id}" | pbcopy`

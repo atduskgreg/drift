@@ -19,7 +19,7 @@ class GEDocument < NSDocument
   attr_accessor :gistListScrollView
   attr_accessor :octocatView
   
-  attr_accessor :gist_url_copy_button, :update_gist_button
+  attr_accessor :gist_url_copy_button, :update_gist_button, :import_gist_button
   
   def applicationDidFinishLaunching(notification)
     # pass
@@ -29,6 +29,7 @@ class GEDocument < NSDocument
     self.octocatView.setImage(GEDocument.octocat_happy)
     self.gist_url_copy_button.setImage(GEDocument.copy_gist_url_button_image)
     self.update_gist_button.setImage(GEDocument.update_gist_image)
+    self.import_gist_button.setImage(GEDocument.import_gist_image)
 
   end
   
@@ -45,7 +46,11 @@ class GEDocument < NSDocument
   end
   
   def self.update_gist_image
-    @@update_gist_image ||= NSImage.alloc.initWithContentsOfFile(NSBundle.mainBundle.pathForImageResource("box_download_48.png"))
+    @@update_gist_image ||= NSImage.alloc.initWithContentsOfFile(NSBundle.mainBundle.pathForImageResource("refresh_48.png"))
+  end
+  
+  def self.import_gist_image
+    @@fetch_gist_image ||= NSImage.alloc.initWithContentsOfFile(NSBundle.mainBundle.pathForImageResource("box_download_48.png"))
   end
   
   def pullCurrentGist(sender)
@@ -55,6 +60,26 @@ class GEDocument < NSDocument
   def copyCurrentGistUrl(sender)
     copy_gist_url(current_gist)
   end
+  
+  
+  # HERE:
+  # TODO: new xib for sheet
+  def importGists(sender)
+    user_url = "http://gist.github.com/api/v1/xml/gists/#{preferences.user.login}"
+        
+    request = NSMutableURLRequest.alloc.init
+    request.setURL(NSURL.URLWithString(user_url))
+    thisDoc = self
+    delegate = ConnectionDelegate.new(self, "Fetching") do |doc|
+      GEGist.build_multiple(doc).each do |gist|
+        gist.add(thisDoc)
+      end
+    end
+    
+    NSURLConnection.connectionWithRequest(request, delegate:delegate)
+    
+  end
+
   
   def copy_gist_url(aGist)
     if aGist
@@ -85,6 +110,11 @@ class GEDocument < NSDocument
   
   def setGist(gist)
     self.text_view.window.setTitle("#{gist.title} - gist.github.com/#{gist.gist_id}")
+    
+    # fetch the gist body if necessary
+    if(!gist.body)
+      gist.populate
+    end
     self.text_view.setString(gist.body)
     self.current_gist = gist
     NSLog("Gist set to: #{self.current_gist.inspect}")
@@ -114,9 +144,7 @@ class GEDocument < NSDocument
 
   
   def getGist(aGist)
-    new_contents = NSString.stringWithContentsOfURL(NSURL.URLWithString("http://gist.github.com/#{aGist.gist_id}.txt"))
-    NSLog(new_contents)
-    aGist.body = new_contents
+    aGist.populate_body
     aGist.update(self)
     updateDocumentStateFromGist(aGist)
   end

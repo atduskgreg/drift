@@ -19,12 +19,15 @@ class GEDocument < NSDocument
   attr_accessor :gistListScrollView
   attr_accessor :octocatView
   
+  attr_accessor :gist_url_copy_button
+  
   def applicationDidFinishLaunching(notification)
     # pass
   end
   
   def windowControllerDidLoadNib(windowController)
     self.octocatView.setImage(GEDocument.octocat_happy)
+    self.gist_url_copy_button.setImage(GEDocument.copy_gist_url_button_image)
   end
   
   def textDidChange(notification)
@@ -33,6 +36,20 @@ class GEDocument < NSDocument
   
   def self.octocat_happy
     @@octocat_happy ||= NSImage.alloc.initWithContentsOfFile(NSBundle.mainBundle.pathForImageResource("octocat_happy"))
+  end
+  
+  def self.copy_gist_url_button_image
+    @@copy_gist_url_button_image ||= NSImage.alloc.initWithContentsOfFile(NSBundle.mainBundle.pathForImageResource("comment_48.png"))
+  end
+  
+  def copyCurrentGistUrl(sender)
+    copy_gist_url(current_gist)
+  end
+  
+  def copy_gist_url(aGist)
+    if aGist
+      `echo "http://gist.github.com/#{aGist.gist_id}" | pbcopy`
+    end
   end
   
   def octocat_happy
